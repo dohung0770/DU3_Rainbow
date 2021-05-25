@@ -8,7 +8,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: Home
   },
@@ -24,6 +24,10 @@ const routes = [
     path: '/login',
     name: "Login",
     component: Login
+  },
+  {
+    path: '/',
+    redirect: '/home'
   }
 ]
 
@@ -34,7 +38,6 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log(store)
   if (to.name !== 'Login' && !store.state.contents.user) {
     next({ name: 'Login' })
   } else next()

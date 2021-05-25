@@ -11,8 +11,7 @@
 
 <script>
 import { fakeLogin } from "../helper/funtionUnity";
-import router from "../router";
-console.log("test");
+// import router from "../router";
 
 export default {
   data() {
@@ -26,7 +25,8 @@ export default {
       this.$store.commit("updateUser", {
         user: fakeLogin(this.username, this.pass),
       });
-      router.push("/");
+      // router.push("/");
+      this.$router.push("/");
     },
   },
 };

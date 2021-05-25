@@ -1,12 +1,28 @@
 <template>
   <div id="app">
-    <div id="nav" v-if="this.$store.state.contents.user">
-      <router-link to="/">Home</router-link> |
+    <!-- <div id="nav" v-if="$store.state.contents.user">
+      <router-link to="/home">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    </div> -->
+    <MainLayout v-if="$store.state.contents.user">
+      <template v-slot:main>
+        <router-view />
+      </template>
+    </MainLayout>
+    <template v-else><router-view /></template>
   </div>
 </template>
+
+<script>
+import MainLayout from "./layout/Main";
+
+export default {
+  components: {
+    MainLayout,
+  },
+};
+</script>
+
 
 <style>
 #app {
