@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <!-- <div id="nav" v-if="$store.state.contents.user">
-      <router-link to="/home">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
     <MainLayout v-if="$store.state.contents.user">
       <template v-slot:main>
         <router-view />
@@ -14,7 +10,7 @@
 </template>
 
 <script>
-import MainLayout from "./layout/Main";
+import MainLayout from "./layout/MainLayout";
 
 export default {
   components: {
@@ -25,24 +21,25 @@ export default {
 
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+/* // #app {
+//   font-family: "Avenir", Helvetica, Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   text-align: center;
+//   color: #2c3e50;
+// }
 
-#nav {
-  padding: 30px;
-}
+// #nav {
+//   padding: 30px;
+// }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+// #nav a {
+//   font-weight: bold;
+//   color: #2c3e50;
+// }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+// #nav a.router-link-exact-active {
+//   color: #42b983;
+// }
+// */
 </style>

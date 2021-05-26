@@ -1,13 +1,12 @@
 <template>
   <div class="container">
-    <header>
-      <slot name="header">
+    <Header />
+    <!-- <slot name="header">
         <div id="nav" v-if="$store.state.contents.user">
           <router-link to="/home">Home</router-link> |
           <router-link to="/about">About</router-link>
         </div>
-      </slot>
-    </header>
+      </slot> -->
     <main>
       <slot name="main" />
     </main>
@@ -18,7 +17,13 @@
 </template>
 
 <script>
-export default {};
+import Header from "../components/Header";
+
+export default {
+  components: {
+    Header,
+  },
+};
 </script>
 
 <style>
