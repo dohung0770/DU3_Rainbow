@@ -1,6 +1,6 @@
 const fakeData = {
   user: {
-    name: 'admin',
+    name: 'admin@gmail.com',
     pass: 'admin'
   }
 }
