@@ -75,23 +75,23 @@
 </template>
 
 <script>
-import { fakeLogin } from "../helper/funtionUnity";
+import { fakeLogin } from '../helper/funtionUnity';
 // import router from "../router";
 
 export default {
   data() {
     return {
-      username: "",
-      pass: "",
+      username: 'admin',
+      pass: 'admin',
     };
   },
   methods: {
     onSubmit() {
-      this.$store.commit("updateUser", {
+      this.$store.commit('updateUser', {
         user: fakeLogin(this.username, this.pass),
       });
       // router.push("/");
-      this.$router.push("/");
+      this.$router.push('/');
     },
   },
 };

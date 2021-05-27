@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .text-white-100{
+        color:#e4e0e0
+    }
+  }
